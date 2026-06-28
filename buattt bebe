@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Kamu ❤️</title>
+    <style>
+        body {
+            background-color: #ffe6e6;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 80%;
+            text-align: center;
+        }
+        h2 { color: #ff4d4d; }
+        p { font-size: 18px; color: #333; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+<div id="box">
+    <h2>Hai Sayang... ✨</h2>
+    <p id="teks-bucin"></p>
+</div>
+
+<script>
+    // Tulis long text bucin kamu di sini
+    const pesan = "Aku cuma mau bilang makasih ya udah ada di hidup aku. Makasih udah jadi orang yang sabar banget ngadepin aku. Kadang aku mikir, kok bisa ya aku seberuntung ini dapetin kamu? Jangan bosen-bosen sama aku ya, kita berjuang bareng terus. I love you more than words can say! ❤️";
+
+    let index = 0;
+    function ketikTeks() {
+        if (index < pesan.length) {
+            document.getElementById("teks-bucin").innerHTML += pesan.charAt(index);
+            index++;
+            setTimeout(ketikTeks, 50); // Kecepatan ngetik (dalam milidetik)
+        }
+    }
+
+    // Mulai efek mengetik saat halaman dibuka
+    window.onload = ketikTeks;
+</script>
+
+</body>
+</html>
